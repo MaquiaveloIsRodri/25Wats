@@ -1,13 +1,20 @@
-import HeaderLogo from "../../atoms/HeaderLogo/Logo";
+import React from 'react';
 import NavigationBar from "../../molecules/NavigationBar/NavigationBar";
+import LogoBussines from "../../../assets/img/logo_25w.png"
+import styleButton from "../../atoms/ButtonSelect/Button.module.css";
+import ButtonSelect from "../../atoms/ButtonSelect/ButtonSelect";
+import { useOpenMenu } from "../../../hooks/UseOpenMenu";
+import './Header.css';
 
 
 
-const Header = ({ links, Logo, Alt }) => {
+const Header = ({ links }) => {
+    const [click, onClick] = useOpenMenu(false);
     return (
-        <header>
-            <HeaderLogo img={Logo} alt={Alt}></HeaderLogo>
-            <NavigationBar link={links}></NavigationBar>
+        <header className="header">
+            <img src={LogoBussines} alt="Logo" className="header__logo" />
+            <ButtonSelect onClick={onClick} style={styleButton.openMenu} >Open</ButtonSelect>
+            <NavigationBar link={links} click={click} setClick={onClick}></NavigationBar>
         </header>
     )
 

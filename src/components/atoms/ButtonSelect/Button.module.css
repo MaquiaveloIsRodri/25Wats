@@ -1,0 +1,39 @@
+.initialButton{
+    background: var(--unnamed-color-e0752f) 0% 0% no-repeat padding-box;
+    background: #E0752F 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    opacity: 1;
+    border: none;
+
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-21) var(--unnamed-font-family-roboto);
+    letter-spacing: var(--unnamed-character-spacing-0-22);
+    color: var(--unnamed-color-ffffff);
+    text-align: center;
+    font: normal normal medium 16px/21px Roboto;
+    letter-spacing: 0.22px;
+    color: #FFFFFF;
+
+    padding: .5rem;
+    margin-top: 44px;
+}
+
+
+.openMenu{
+    display: none;
+}
+
+.closeMenu{
+    display: none;
+}
+
+
+@media screen and (max-width:563px) {
+    .openMenu{
+        display: block;
+    }
+
+    .closeMenu{
+        display: block;
+    }
+    
+}
